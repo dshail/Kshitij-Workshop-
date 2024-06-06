@@ -1,0 +1,497 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #333;
+    color: white;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background 0.3s;
+}
+
+.nav-links a:hover {
+    background: #575757;
+    border-radius: 4px;
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+.intro-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 20px 20px;
+    background: url('music.jpg') no-repeat center center/cover;
+    position: relative;
+}
+
+.intro-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.intro-text {
+    flex: 1;
+    padding: 20px;
+    z-index: 2;
+}
+
+.intro-image {
+    flex: 1;
+    padding: 20px;
+    z-index: 2;
+}
+
+.intro-text h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.intro-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.intro-text button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.intro-text button:hover {
+    background: #575757;
+}
+
+.intro-image img {
+    max-width: 100%;
+    animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.playlists-section {
+    padding: 40px 20px;
+    background: url('playlistbg.jpg') no-repeat center center/cover;
+    position: relative;
+}
+
+.playlists-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.playlists-section h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: white;
+    z-index: 2;
+    position: relative;
+}
+
+.playlists-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: white;
+    z-index: 2;
+    position: relative;
+}
+
+.playlist-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    z-index: 2;
+    position: relative;
+}
+
+.playlist-card {
+    position: relative;
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    width: calc(33.333% - 20px);
+}
+
+.playlist-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.playlist-info {
+    padding: 10px 0;
+}
+
+.playlist-info h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.playlist-info p {
+    font-size: 16px;
+}
+
+.song-count {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.albums-section {
+    padding: 40px 20px;
+    background: url('abg.jpg') no-repeat center center/cover;
+    position: relative;
+}
+
+.albums-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.albums-section h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: white;
+    z-index: 2;
+    position: relative;
+}
+
+.albums-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: white;
+    z-index: 2;
+    position: relative;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    z-index: 2;
+    position: relative;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+}
+
+.search-bar button {
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.album-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    z-index: 2;
+    position: relative;
+}
+
+.album-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: calc(33.333% - 20px);
+    transition: transform 0.3s;
+}
+
+.album-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.album-info {
+    padding: 10px 0;
+}
+
+.album-info h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.album-info p {
+    font-size: 16px;
+}
+
+.album-card:hover {
+    transform: scale(1.05);
+}
+
+.reviews-section {
+    padding: 40px 20px;
+    background: url('rbg.jpg') no-repeat center center/cover;
+    position: relative;
+}
+
+.reviews-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.reviews-section h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: white;
+    z-index: 2;
+    position: relative;
+}
+
+.reviews-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: white;
+    z-index: 2;
+    position: relative;
+}
+
+.review-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    z-index: 2;
+    position: relative;
+}
+
+.review-card {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    width: calc(33.333% - 20px);
+}
+
+.review-card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.review-info {
+    padding: 10px 0;
+}
+
+.review-info h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.review-info p {
+    font-size: 16px;
+}
+
+.review-form {
+    margin-top: 40px;
+    z-index: 2;
+    position: relative;
+}
+
+.review-form h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.review-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.review-form input, .review-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.review-form button {
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.review-form button:hover {
+    background: #575757;
+}
+
+.footer {
+    background: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.social-icons {
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 24px;
+}
+
+.social-icons a:hover {
+    color: #575757;
+}
+
+.footer-links {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.back-to-top {
+    padding: 10px;
+    background: #575757;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.back-to-top:hover {
+    background: #777;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .intro-section {
+        flex-direction: column;
+    }
+
+    .playlist-card, .album-card, .review-card {
+        width: 100%;
+    }
+}
+
+/* Light/Dark mode styles */
+body.light-mode {
+    background: #fff;
+    color: #333;
+}
+
+body.dark-mode {
+    background: #333;
+    color: #fff;
+}
+
+.toggle-mode {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+body.dark-mode .toggle-mode {
+    background: #fff;
+    color: #333;
+}
+
+body.light-mode .toggle-mode {
+    background: #333;
+    color: #fff;
+}
